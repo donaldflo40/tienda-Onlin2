@@ -1,0 +1,94 @@
+<html>
+<head>
+	<title>Tienda</title>
+	<link rel="stylesheet" href="css/estilos.css">
+	<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+	<h1>
+		<span style="font-family: 'Playfair Display', serif;">Verdana</span><br>
+		<span style="font-family: 'Great Vibes', cursive;">La calidad en un solo lugar</span>
+	  </h1>	  
+	<section id= "carrusel">
+	<main>
+		<div class= "slider">
+			<img src="./imagenes/Producto 1.jpg" alt="pr1">
+			<img src="./imagenes/Producto 2.jpg" alt="pr2">
+			<img src="./imagenes/Producto 3.jpg" alt="pr3">
+			<img src="./imagenes/Producto 4.jpg" alt="pr4">
+			<img src="./imagenes/Producto 5.jpg" alt="pr5">
+			<img src="./imagenes/Producto 6.jpg" alt="pr6">
+			<img src="./imagenes/Producto 7.jpg" alt="pr7">
+			<img src="./imagenes/Producto 8.jpg" alt="pr8">
+		</div>
+	</section>
+	</main>
+</header>
+<section id="contenido">
+	<section id="destacados">
+		<h1>Productos destacados</h1>
+		<div class="contenedor">
+			<div>
+				Producto 1
+			</div>
+			<div>
+				Producto 2
+			</div>
+		</div>
+	</section>
+	<section id="ofertas">
+		<h1>Ofertas</h1>
+		<div class="contenedor">
+			<div>
+				Producto 1
+			</div>
+			<div>
+				Producto 2
+			</div>
+			<div>
+				Producto 3
+			</div>
+		</div>
+	</section>
+	<section id="disponible">
+		<h1>Disponible</h1>
+		<div class="contenedor">
+			<div>
+				Producto 1
+			</div>
+			<div>
+				Producto 2
+			</div>
+			<div>
+				Producto 3
+			</div>
+			<div>
+				Producto 4
+			</div>
+
+		</div>
+	</section>
+</section>
+<footer>
+	Derechos Reservados
+</footer>
+<script>
+	const slider = document.querySelector("#carrusel .slider");
+  
+	let scrollAmount = 0;
+	function autoScroll() {
+	  scrollAmount += 1;
+	  if (scrollAmount >= slider.scrollWidth - slider.clientWidth) {
+		scrollAmount = 0;
+	  }
+	  slider.scrollTo({
+		left: scrollAmount,
+		behavior: 'smooth'
+	  });
+	}
+  
+	setInterval(autoScroll, 25); // velocidad de desplazamiento
+  </script>  
+</body>
+</html>
